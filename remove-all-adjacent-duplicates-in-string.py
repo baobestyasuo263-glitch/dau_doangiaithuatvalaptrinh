@@ -1,0 +1,18 @@
+class Solution(object):
+
+    def removeDuplicates(self, s):
+
+        stack = []
+
+        for c in s:
+
+            # Nếu trùng ký tự trên đỉnh stack
+            if stack and stack[-1] == c:
+
+                stack.pop()
+
+            else:
+
+                stack.append(c)
+
+        return "".join(stack)
